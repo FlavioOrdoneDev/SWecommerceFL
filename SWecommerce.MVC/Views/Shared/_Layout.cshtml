@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SW e-commerce</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <script>
+        function retornarURL(action, controller) {
+            var url = '@Url.Action("Action", "Controller")';
+            url = url.replace("Action", action);
+            url = url.replace("Controller", controller);
+
+            return url;
+        }
+    </script>
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("SW e-commerce", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Cadastro de Produtos", "Index", "Produto")</li>
+                    <li>@Html.ActionLink("Pedido", "Index", "Home")</li>                    
+                    <li>@Html.ActionLink("Carrinho", "Pedido", "Home")</li>
+                 </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div id="dvMensagens" class="container">
+                @RenderSection("Mensagem", required: false)
+            </div>
+        </div>
+    </div>
+
+    <input type="hidden" value="Favor informar os campos obrigatórios" id="hdnCampoObrigatorio" />
+    <input type="hidden" value="Sim" id="hdnSim" />
+    <input type="hidden" value="Não" id="hdnNao" />
+    <input type="hidden" value="Deseja excluir o registro selecionado?" id="hdnMsgExclusao" />
+    <input type="hidden" value="Atenção" id="hdnAtencao" />
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; @DateTime.Now.Year - SW e-commerce</p>
+        </footer>
+    </div>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

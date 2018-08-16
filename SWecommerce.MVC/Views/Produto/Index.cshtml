@@ -1,0 +1,53 @@
+﻿@model  List<SWecommerce.Dominio.BuscarProdutosDominio>
+
+<link href="~/ECommerceCSS/ProdutoIndexListarCSS.css" rel="stylesheet" />
+<input type="hidden" value="Cadastrar Produto" id="hdnMsgCadastrarProduto" />
+<input type="hidden" value="Alterar Produto" id="hdnMsgAlterarProduto" />
+
+<h3>Cadastrar Produtos</h3>
+
+<div id="cadastro">
+    <section id="cadastro_cabecalho">
+        
+    </section>
+    <section id="cadastro_conteudo">
+        <div id="cabecalho_grid" class="row">
+            <div class="col-md-12">
+                <a id="btn_incluir" class="btn-sm btn-success" role="button"><i class="glyphicon glyphicon-plus"></i> Incluir</a>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <table id="grid_cadastro" class="table table-bordered table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Preço</th>
+                            <th>Promoção</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model)
+                        {
+                            <tr data-id="@item.Id">
+                                <td>@item.Nome</td>
+                                <td>@item.Preco</td>
+                                <td>@item.TipoPromocao</td>
+                                <td>
+                                    <a class="btn-sm btn-primary btn-alterar" role="button"><i class="glyphicon glyphicon-pencil"></i> Alterar</a>
+                                    <a class="btn-sm btn-danger btn-excluir" role="button"><i class="glyphicon glyphicon-trash"></i> Excluir</a>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+</div>
+
+<div id="modalDadosProduto"></div>
+
+<script src="~/ECommerceScripts/Produto/ProdutoIndexEventoDosControles.js"></script>
+
+

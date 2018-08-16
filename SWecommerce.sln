@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWecommerce.Dominio", "SWecommerce.Dominio\SWecommerce.Dominio.csproj", "{1171AEF8-B61D-4E29-9263-49B67A670F95}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Dominio", "Dominio", "{F3B90E39-EC23-493E-9B9F-CE62FA336606}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Apresentacao", "Apresentacao", "{36538E0E-9EE0-41CB-965F-6E5ED01ADACF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWecommerce.Infra", "SWecommerce.Infra\SWecommerce.Infra.csproj", "{BCC95CB5-CB17-4799-B9A2-9034F0D6B596}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infra", "Infra", "{7C0ED143-9FBB-49ED-AB3F-1149F8C17DAA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SWecommerce.MVC", "SWecommerce.MVC\SWecommerce.MVC.csproj", "{692CB229-741F-4596-9F84-DC6985428F12}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1171AEF8-B61D-4E29-9263-49B67A670F95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1171AEF8-B61D-4E29-9263-49B67A670F95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1171AEF8-B61D-4E29-9263-49B67A670F95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1171AEF8-B61D-4E29-9263-49B67A670F95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BCC95CB5-CB17-4799-B9A2-9034F0D6B596}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BCC95CB5-CB17-4799-B9A2-9034F0D6B596}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BCC95CB5-CB17-4799-B9A2-9034F0D6B596}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BCC95CB5-CB17-4799-B9A2-9034F0D6B596}.Release|Any CPU.Build.0 = Release|Any CPU
+		{692CB229-741F-4596-9F84-DC6985428F12}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{692CB229-741F-4596-9F84-DC6985428F12}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{692CB229-741F-4596-9F84-DC6985428F12}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{692CB229-741F-4596-9F84-DC6985428F12}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{1171AEF8-B61D-4E29-9263-49B67A670F95} = {F3B90E39-EC23-493E-9B9F-CE62FA336606}
+		{BCC95CB5-CB17-4799-B9A2-9034F0D6B596} = {7C0ED143-9FBB-49ED-AB3F-1149F8C17DAA}
+		{692CB229-741F-4596-9F84-DC6985428F12} = {36538E0E-9EE0-41CB-965F-6E5ED01ADACF}
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,36 @@
+﻿
+#grid_produto > thead > tr th:nth-child(1) {
+    width: 110px;
+}
+
+#grid_produto > thead > tr th:nth-child(2) {
+    width: 110px;
+}
+
+#grid_produto > thead > tr th:nth-child(3) {
+    width: 250px;
+}
+
+#produto {
+    width: 100%;
+    margin: 0 auto;
+}
+
+#produto_cabecalho {
+    border-bottom: 1px #dddddd solid;
+}
+
+#produto_conteudo {
+    margin-top: 20px;
+}
+
+#cabecalho_grid {
+    margin-bottom: 20px;
+}
+
+.invisivel {
+    display: none;
+}
+
+
+

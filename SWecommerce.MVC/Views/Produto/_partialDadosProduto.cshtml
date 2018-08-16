@@ -1,0 +1,54 @@
+﻿@model SWecommerce.Dominio.Entidades.Produto
+
+@using (Html.BeginForm("", "", FormMethod.Post, new { @id = "formDadosCadastraisProduto" }))
+{
+    @Html.HiddenFor(m => m.Id, new { @id = "hdnIdProduto" })
+    <div class="container">
+        <div class="row">
+            <div class="form-group">
+
+                <div class="col-sm-4">
+                    <label>Nome:</label>
+                    @Html.TextBoxFor(m => m.Nome, new
+               {
+                   @id = "txtNome",
+                   @class = "form-control",
+                   @data_required = "true",
+                   @data_mensagem = "Campo obrigatório"
+               })
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-6">
+                    <label>Preço:</label>
+                    @Html.TextBoxFor(m => m.Preco, new
+               {
+                   @id = "txtPreco",
+                   @class = "form-control",
+                   @data_required = "true",
+                   @data_mensagem = "Campo obrigatório"
+               })
+                </div>
+                <div class="col-sm-5">
+                    <label>Tipo de Promoção:</label>
+                    @Html.EnumDropDownListFor(m => m.TipoPromocao, htmlAttributes:
+                  new
+                  {
+                      @class = "form-control",
+                      @id = "txtStatus",
+                      @data_required = "false"
+                  })
+                </div>
+
+                <div class="pull-right">
+                    <div class="col-sm-12">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                        <button type="submit" id="btnSalvarDadosCadastrais" class="btn btn-success">Salvar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
+<script src="~/ECommerceScripts/Produto/_partialDadosProdutoEventoDosControles.js"></script>
