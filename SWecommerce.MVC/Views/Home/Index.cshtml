@@ -25,15 +25,17 @@
                                 <th>Nome</th>
                                 <th>Preço</th>
                                 <th>Promoção</th>
+                                <th>Quantidade</th>
                             </tr>
                         </thead>
                         <tbody>
                             @foreach (var item in Model)
                             {
                                 <tr id="@item.Id">
-                                    <td  nome="@item.Nome">@item.Nome</td>
-                                    <td class="moeda" preco="@item.Preco">@item.Preco</td>
-                                    <td promocao="@item.TipoPromocao">@item.TipoPromocao</td>
+                                    <td ><text id="nome">@item.Nome<text></td>
+                                    <td ><text id="preco">@item.Preco<text></td>
+                                    <td ><text id="promocao">@item.TipoPromocao<text></td>
+                                    <td ><input type="number" min="1" value="1" id="txtQtd"></td>
                                     <td>
                                         <a class="btn-sm btn-success btn-adicionar" role="button"><i class="glyphicon glyphicon-shopping-cart"></i> Adicionar</a>
 

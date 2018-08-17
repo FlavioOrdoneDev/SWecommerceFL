@@ -13,25 +13,28 @@ namespace SWecommerce.Dominio
         {
             try
             {
-                IPromocaoStrategy calcular;
+                IPromocaoStrategy promocao;
 
-                if (tipoPromocao == ETipoPromocao.Promocao_Compre_x_Produtos_Leve_y)
+                switch (tipoPromocao)
                 {
-                    return calcular = new PromocaoCompre1Leve2Strategy();
+                    case ETipoPromocao.Promocao_x_Produtos_por_y_Reais:
+                        promocao = new PromocaoLeve3ProdutosPague10ReaisStrategy();
+                        break;  
+                    case ETipoPromocao.Promocao_Compre_x_Produtos_Leve_y:
+                        promocao = new PromocaoCompre1Leve2Strategy();
+                        break; 
+                    case ETipoPromocao.SemPromocao:
+                        promocao = new ProdutoSemPromocaoStrategy();
+                        break;
+                    default:
+                        throw new NotImplementedException();
                 }
-                else if (tipoPromocao == ETipoPromocao.Promocao_x_Produtos_por_y_Reais)
-                {
-                    return calcular = new PromocaoLeve3ProdutosPague10ReaisStrategy();
-                }
-                else
-                {
-                    return calcular = new ProdutoSemPromocaoStrategy();
-                }
+
+                return promocao;
 
             }
             catch (Exception ex)
             {
-
                 throw ex;
             }
                         

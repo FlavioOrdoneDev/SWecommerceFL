@@ -1,17 +1,22 @@
 ﻿$(document).ready(function () {
 
-   $(".btn-adicionar").on("click", function () {        
-        
-        var carrinho = localStorage.getItem("carrinho");
+    //var $td = $("td")
+    //$td.eq(2).css("color", "red").end().mouseover(function () {
+    //    alert($td.index(this))
+    //});
+    
+    $(".btn-adicionar").on("click", function () {
+        debugger;
+       var carrinho = localStorage.getItem("carrinho");
         carrinho = JSON.parse(carrinho);
         if (carrinho == null)
             carrinho = [];
         var produto = {
-            Id: $(this).closest('tbody').find('tr[id]').attr('id'),
-            Produto: $(this).closest('tr').find('td[nome]').attr('nome'),
-            Valor: $(this).closest('tr').find('td[preco]').attr('preco'),
-            Quantidade: $(this).closest('tr').find('td[pro]').attr('pro'),
-            Promocao: $(this).closest('tr').find('td[promocao]').attr('promocao'),
+            Id: $(this).parent().next('td').text(),
+        Produto    : $(this).parent().next('td').text(),   //$(this).closest('tr').find('td[nome]').attr('nome'),
+            Valor      : $("#preco").text(),  //$(this).closest('tr').find('td[preco]').attr('preco'),
+            Promocao   : $("#promocao").text(), //$(this).closest('tr').find('td[promocao]').attr('promocao'),
+            Quantidade : $("#txtQtd").val(),
             Total: 0
         };
         
@@ -20,7 +25,7 @@
             url: url,
             dataType: "json",
             type: "GET",
-            data: { produtoId: produto.Id, quantidade: 10 },
+            data: { produtoId: produto.Id, quantidade: produto.Quantidade },
             cache: false,
             success: function (dados) {                
                 

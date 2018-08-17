@@ -65,10 +65,7 @@ namespace SWecommerce.MVC.App_Start
         private static void RegisterServices(IKernel kernel)
         {
             kernel.Bind<SWecommerceContexto>().ToSelf().InRequestScope();
-            kernel.Bind<IPromocaoFactory>().To<PromocaoFactory>().InRequestScope();
-            kernel.Bind<IPromocaoStrategy>().To<PromocaoLeve3ProdutosPague10ReaisStrategy>().InRequestScope();
-            kernel.Bind<IPromocaoStrategy>().To<PromocaoCompre1Leve2Strategy>().InRequestScope();
-            kernel.Bind<IPromocaoStrategy>().To<ProdutoSemPromocaoStrategy>().InRequestScope();
+            kernel.Bind<IPromocaoFactory>().To<PromocaoFactory>().InRequestScope();            
             kernel.Bind<IProdutoRepositorio>().To<ProdutoRepositorio>().InRequestScope();
                        
         }        
