@@ -51,9 +51,9 @@
     <Compile Include="Consultas\Base\IConsulta.cs" />
     <Compile Include="Consultas\Base\IConsultaExecutar.cs" />
     <Compile Include="Consultas\Produto\ConsultaBuscarTodosProdutos.cs" />
-    <Compile Include="Entidades\PromocaoFactory\IPromocaoFactory.cs" />
-    <Compile Include="Entidades\PromocaoFactory\PromocaoFactory.cs" />
-    <Compile Include="Entidades\PromocaoStrategy\ProdutoSemPromocaoStrategy.cs" />
+    <Compile Include="PromocaoFactory\IPromocaoFactory.cs" />
+    <Compile Include="PromocaoFactory\PromocaoFactory.cs" />
+    <Compile Include="PromocaoStrategy\ProdutoSemPromocaoStrategy.cs" />
     <Compile Include="Resultados\ItemPedidoResultado.cs" />
     <Compile Include="DominioModels\Produto\BuscarProdutosDominio.cs" />
     <Compile Include="DominioModels\Produto\ProdutoDominio.cs" />
@@ -63,9 +63,9 @@
     <Compile Include="Entidades\ItemPedido.cs" />
     <Compile Include="Entidades\Pedido.cs" />
     <Compile Include="Entidades\Produto.cs" />
-    <Compile Include="Entidades\PromocaoStrategy\PromocaoCompre1Leve2Strategy.cs" />
-    <Compile Include="Entidades\PromocaoStrategy\PromocaoLeve3ProdutosPague10ReaisStrategy.cs" />
-    <Compile Include="Entidades\PromocaoStrategy\IPromocaoStrategy.cs" />
+    <Compile Include="PromocaoStrategy\PromocaoCompre1Leve2Strategy.cs" />
+    <Compile Include="PromocaoStrategy\PromocaoLeve3ProdutosPague10ReaisStrategy.cs" />
+    <Compile Include="PromocaoStrategy\IPromocaoStrategy.cs" />
     <Compile Include="Enums\EPromocaoStatus.cs" />
     <Compile Include="Enums\ETipoPromocao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
