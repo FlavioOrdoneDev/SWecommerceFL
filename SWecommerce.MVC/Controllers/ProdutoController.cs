@@ -55,6 +55,30 @@ namespace SWecommerce.MVC.Controllers
                 return Json(new { Result = "Error", Data = ex.Message }, JsonRequestBehavior.AllowGet);
             }
         }
+		
+		[HttpGet]
+        public ActionResult Index2()
+        {
+            try
+            {
+                var produtos = _consultaBuscarTodosProdutos.Executar();
+
+                var modelo = produtos.Select(x => new BuscarProdutosDominio
+                {
+                    Id = x.Id,
+                    Nome = x.Nome,
+                    Preco = x.Preco,
+                    TipoPromocao = x.TipoPromocao
+                }).OrderBy(x => x.Nome)
+                  .ToList();
+
+                return View(modelo);
+            }
+            catch (Exception ex)
+            {
+                return Json(new { Result = "Error", Data = ex.Message }, JsonRequestBehavior.AllowGet);
+            }
+        }
 
         [HttpGet]
         public ActionResult PartialCadastrarProduto()
